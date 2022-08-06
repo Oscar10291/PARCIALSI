@@ -1,0 +1,44 @@
+import java.io.*;
+class personal
+{
+private String Nombre,Apellidos,Titulación;
+private int Grupo;
+
+//CONSTRUCTOR
+public personal (String n,String a,String t,int g){
+Grupo=g;
+Nombre=n;
+Apellidos=a;
+Titulación=t;
+}
+//MÉTODO
+public void muestra(){
+System.out.println("El nombre introducido es: " );
+System.out.println(Nombre);
+System.out.println("Los apellidos introducido son: " );
+System.out.println(Apellidos);
+System.out.println("Su titulacion introducido es: " );
+System.out.println(Titulación);
+System.out.println("Esta en el grupo: " );
+System.out.println(Grupo);
+}
+}
+public class prac03{
+//PROGRAMA PRINCIPAL, SE INTRODUCEN LOS DATOS
+public static void main(String args[])throws IOException{
+
+String g,n,t,a;
+InputStreamReader k = new InputStreamReader(System.in);//ENTRADA POR TECLADO LÍNEA A LÍNEA
+BufferedReader q = new BufferedReader(k);
+System.out.println("Por favor intrduzca el nombre: ");
+n=q.readLine();
+System.out.println("Por favor introduzca sus apellidos: ");
+a=q.readLine();
+System.out.println("Por favor introduzca su titulacion: ");
+t=q.readLine();
+System.out.println("Por favor introduzca su grupo: ");
+g=q.readLine();
+personal Alumno= new personal(n,a,t,Integer.parseInt(g));
+Alumno.muestra();
+}
+}
